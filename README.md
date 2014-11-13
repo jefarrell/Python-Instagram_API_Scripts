@@ -1,6 +1,6 @@
 Instagram-Hashtag-Search-Save
 =============================
-Query the Instagram API to search for all posts using a given hashtag
+Use python to query the Instagram API to search for all posts using a given hashtag
 
 Save your query to a pickle file for later analysis
 
