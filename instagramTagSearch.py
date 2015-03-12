@@ -7,6 +7,7 @@
 from urlparse import urlparse
 from instagram.client import InstagramAPI
 import pickle
+import sys
 
 # Fill in your API information
 client_id = 'YOUR_ID'
@@ -15,7 +16,7 @@ api = InstagramAPI(client_id=client_id, client_secret=client_secret)
 
 
 # Do your first hashtag search
-used_tag='YOUR_HASHTAG'
+used_tag=sys.argv[1]
 max_tag_id = 0
 all_media = []
 ans = api.tag_recent_media(33,max_tag_id,used_tag)
@@ -27,7 +28,7 @@ for m in ans[0]:
 	params = {a:b for a,b in [x.split('=') for x in parsed.query.split('&')]}
 
 # Iterate backwards through media, using max_tag_id, appending posts to the all_media array
-for i in range(1000):
+for i in range(10):
 	try:
 	    max_tag_id = int(params['max_tag_id'])
 	    ans = api.tag_recent_media(33,max_tag_id-1, used_tag)
