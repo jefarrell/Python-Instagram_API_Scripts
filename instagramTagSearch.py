@@ -28,6 +28,7 @@ for m in ans[0]:
 	params = {a:b for a,b in [x.split('=') for x in parsed.query.split('&')]}
 
 # Iterate backwards through media, using max_tag_id, appending posts to the all_media array
+# Increase the range() number to run more iterations for more data
 for i in range(10):
 	try:
 	    max_tag_id = int(params['max_tag_id'])
