@@ -1,8 +1,8 @@
 Instagram-API-Data
 =============================
-Use python to query the Instagram API:
-   TagSearch returns all posts containing a given hashtag
-   LocationSearch returns all posts tagged with a given location ID
+Use python to query the Instagram API:  return
+   TagSearch returns all posts containing a given hashtag  return
+   LocationSearch returns all posts tagged with a given location ID  return
 
 Both scripts by default request 33 media objects from Instagram.  The "numberofIterations" argument below specifies how many times to run through that loop.  For example, an argument of 5 will (potentially) return 165 objects (33/loop * 5 loops)
 Both scrips save your query to a pickle file for later analysis
