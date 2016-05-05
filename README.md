@@ -13,8 +13,8 @@ Both scrips save your query to a pickle file for later analysis
 #### Tag Search  
 Return all posts containing a given hashtag  
 **Usage**:  
-```python instagramTagSearch.py yourDesiredTag numberofIterations    
-**Example**:
+```python instagramTagSearch.py yourDesiredTag numberofIterations      
+**Example**:  
 ```python instagramTagSearch.py earthday 20
    
 ***
