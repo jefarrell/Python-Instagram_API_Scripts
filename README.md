@@ -14,14 +14,16 @@ Both scrips save your query to a pickle file for later analysis
 &nbsp;&nbsp;&nbsp;Return all posts containing a given hashtag  
 &nbsp;&nbsp;&nbsp;**Usage**:  
 &nbsp;&nbsp;&nbsp;```python instagramTagSearch.py yourDesiredTag numberofIterations    
-&nbsp;&nbsp;&nbsp;**Example**:```python instagramTagSearch.py earthday 20
+&nbsp;&nbsp;&nbsp;**Example**:
+&nbsp;&nbsp;&nbsp;```python instagramTagSearch.py earthday 20
    
    
 #### Location Search
 &nbsp;&nbsp;&nbsp;Return all posts tagged at given location ID  
 &nbsp;&nbsp;&nbsp;**Usage**:  
 &nbsp;&nbsp;&nbsp;```python instagramLocationSearch.py locationID numberofIterations    
-&nbsp;&nbsp;&nbsp;**Example**:```python instagramLocationSearch.py 330936715 20
+&nbsp;&nbsp;&nbsp;**Example**:
+&nbsp;&nbsp;&nbsp;```python instagramLocationSearch.py 330936715 20
    
 &nbsp;&nbsp;&nbsp;**How to find a location ID**  
 &nbsp;&nbsp;&nbsp;Easiest way is the [location search endpoint](https://www.instagram.com/developer/endpoints/locations/#get_locations_search)  
