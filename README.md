@@ -1,9 +1,7 @@
 Instagram-API-Data
 =============================
-Use python to query the Instagram API:
-
-   TagSearch returns all posts containing a given hashtag
-   
+Use python to query the Instagram API:  
+   TagSearch returns all posts containing a given hashtag  
    LocationSearch returns all posts tagged with a given location ID
    
 
