@@ -1,4 +1,4 @@
-Instagram-API-Data
+Python-Instagram_API_Scripts
 =============================
 Use python to query the Instagram API:  
 - TagSearch returns all posts containing a given hashtag  
