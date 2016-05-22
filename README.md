@@ -30,7 +30,8 @@ Start with a latitude/longitude point, and Instagram will return a list of locat
 locationNames = api.location_search(lat=yourLatitude, lng=yourLongitude)  
 for m in locationNames:  
    print m  
-   print m.name  
+   print m.name
+   print m.id  
 ```
 Use your desired location ID with the LocationSearch script  
    
