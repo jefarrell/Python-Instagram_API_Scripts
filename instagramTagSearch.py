@@ -1,7 +1,7 @@
 #
 ##
 ### John Farrell
-#### NYU ITP
+#### Search Instagram posts by hashtag
 ##### Adapted from Gilad Lotan / Social Data Analysis
 
 from urlparse import urlparse
@@ -17,7 +17,9 @@ api = InstagramAPI(client_id=client_id, client_secret=client_secret)
 
 # Do your first hashtag search
 used_tag=sys.argv[1]
-max_tag_id = 0
+iterations=sys.argv[2]
+iterations = int(iterations)
+max_tag_id = ''
 all_media = []
 ans = api.tag_recent_media(33,max_tag_id,used_tag)
 
@@ -29,10 +31,10 @@ for m in ans[0]:
 
 # Iterate backwards through media, using max_tag_id, appending posts to the all_media array
 # Increase the range() number to run more iterations for more data
-for i in range(10):
+for i in range(iterations):
 	try:
-	    max_tag_id = int(params['max_tag_id'])
-	    ans = api.tag_recent_media(33,max_tag_id-1, used_tag)
+	    max_tag_id = params['max_tag_id']
+	    ans = api.tag_recent_media(33,max_tag_id, used_tag)
 	    for m in ans[0]:
 	        all_media.append(m)
 	        
@@ -42,4 +44,4 @@ for i in range(10):
 		break
 
 # Save a pickle file to work off in the future
-pickle.dump(all_media, open('%s_data.p'%used_tag, 'wb'))
+pickle.dump(all_media, open('%s_tagData.p'%used_tag, 'wb'))

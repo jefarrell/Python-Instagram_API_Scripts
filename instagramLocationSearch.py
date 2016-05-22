@@ -15,7 +15,8 @@ client_secret = 'YOUR_SECRET'
 api = InstagramAPI(client_id=client_id, client_secret=client_secret)
 
 
-# Do your first hashtag search
+# Do your first location search
+# See ReadMe for quick method to find Instagram location IDs
 iterations=sys.argv[1]
 locationID=sys.argv[2]
 
@@ -35,8 +36,8 @@ for m in ans[0]:
 # Increase the range() number to run more iterations for more data
 for i in range(iterations):
 	try:
-	    max_tag_id = params['max_tag_id']
-	    ans = api.tag_recent_media(33,max_tag_id, used_tag)
+	    max_tag_id = params['max_id']
+	    ans = api.tag_recent_media(33,max_tag_id, locationID)
 	    for m in ans[0]:
 	        all_media.append(m)
 	        
@@ -46,4 +47,4 @@ for i in range(iterations):
 		break
 
 # Save a pickle file to work off in the future
-pickle.dump(all_media, open('%s_locationData.p'%used_tag, 'wb'))
+pickle.dump(all_media, open('%s_locationData.p'%locationID, 'wb'))
