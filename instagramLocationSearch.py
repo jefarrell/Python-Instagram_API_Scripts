@@ -17,8 +17,8 @@ api = InstagramAPI(client_id=client_id, client_secret=client_secret)
 
 # Do your first location search
 # See ReadMe for quick method to find Instagram location IDs
-iterations=sys.argv[1]
-locationID=sys.argv[2]
+locationID=sys.argv[1]
+iterations=sys.argv[2]
 
 iterations = int(iterations)
 locationID = int(locationID)
